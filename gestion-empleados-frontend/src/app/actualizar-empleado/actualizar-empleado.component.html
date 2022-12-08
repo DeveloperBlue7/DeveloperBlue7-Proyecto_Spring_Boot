@@ -60,7 +60,24 @@
             class="form-control"
             id = "cargo"
             [(ngModel)] = "empleado.cargo"
-            name = "cargo">
+            name = "cargo"
+            required
+            minlength="4"
+            maxlength="10"
+            placeholder="Digite su cargo "
+            #cargo = "ngModel"
+            >
+            <div class="alert alert-danger" *ngIf= "cargo.invalid && (cargo.dirty || cargo.touched)">
+              <div *ngIf = "cargo.errors.required">
+                Digite su cargo por favor
+              </div>
+              <div *ngIf = "cargo.errors.minlength">
+                El cargo tiene que contener como minimo 10 caracteres
+              </div>
+              <div *ngIf = "cargo.errors.maxlength">
+                El cargo tiene que tener como maximo 10 caracteres
+              </div>
+            </div>
         </div>
 
         <div class="form-group">
@@ -69,7 +86,24 @@
             class="form-control"
             id = "celular"
             [(ngModel)] = "empleado.celular"
-            name = "celular">
+            name = "celular"
+            required
+            minlength="4"
+            maxlength="10"
+            placeholder="Digite su cargo "
+            #celular = "ngModel"
+            >
+            <div class="alert alert-danger" *ngIf= "celular.invalid && (celular.dirty || celular.touched)">
+              <div *ngIf = "celular.errors.required">
+                Digite su celular por favor
+              </div>
+              <div *ngIf = "celular.errors.minlength">
+                El celular tiene que contener como minimo 10 caracteres
+              </div>
+              <div *ngIf = "celular.errors.maxlength">
+                El celular tiene que tener como maximo 10 caracteres
+              </div>
+            </div>
         </div>
 
         <div class="form-group">
@@ -78,7 +112,24 @@
             class="form-control"
             id = "direccion"
             [(ngModel)] = "empleado.direccion"
-            name = "direccion">
+            name = "direccion"
+            required
+            minlength="4"
+            maxlength="10"
+            placeholder="Digite su cargo "
+            #direccion = "ngModel"
+            >
+            <div class="alert alert-danger" *ngIf= "direccion.invalid && (direccion.dirty || direccion.touched)">
+              <div *ngIf = "direccion.errors.required">
+                Digite su direccion por favor
+              </div>
+              <div *ngIf = "direccion.errors.minlength">
+                La direccion tiene que tener minimo 15 caracteres
+              </div>
+              <div *ngIf = "direccion.errors.maxlength">
+                La direccion tiene que tener como maximo 30 caracteres
+              </div>
+            </div>
         </div>
 
         <div class="form-group">
