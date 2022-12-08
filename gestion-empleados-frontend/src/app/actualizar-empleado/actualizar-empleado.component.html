@@ -61,7 +61,7 @@
             [(ngModel)] = "empleado.cargo"
             name = "cargo"
             required
-            minlength="10"
+            minlength="5"
             maxlength="10"
             placeholder="Digite su cargo "
             #cargo = "ngModel"
@@ -113,7 +113,7 @@
             [(ngModel)] = "empleado.direccion"
             name = "direccion"
             required
-            minlength="4"
+            minlength="5"
             maxlength="10"
             placeholder="Digite su Direccion "
             #direccion = "ngModel"
@@ -124,7 +124,7 @@
             Digite su direccion por favor
           </div>
           <div *ngIf = "direccion.errors.minlength">
-            La direccion tiene que tener minimo 15 caracteres
+            La direccion tiene que tener minimo 5 caracteres
           </div>
           <div *ngIf = "direccion.errors.maxlength">
             La direccion tiene que tener como maximo 30 caracteres
